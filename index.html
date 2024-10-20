@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎃 Happy Halloween 🎃</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <h1>🎃 Happy Halloween 🎃</h1>
+    <p>Get ready for a frightful night!</p>
+  </header>
+
+  <section class="pumpkin-section">
+    <img src="pumpkin.jpg" alt="Spooky Pumpkin" class="pumpkin" id="pumpkin">
+    <p class="spooky-text">Click the pumpkin... if you dare!</p>
+    <p class="countdown" id="countdown"></p>
+  </section>
+
+  <footer>
+    <p>  Thanks for the visit! Have a good time! </p>
+  </footer>
+
+  <script>
+   
+    const countdownElement = document.getElementById('countdown');
+    const halloweenDate = new Date('2024-10-31T00:00:00').getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = halloweenDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m until Halloween!`;
+
+      if (distance < 0) {
+        clearInterval();
+        countdownElement.innerHTML = "Happy Halloween!";
+      }
+    }, 1000);
+
+  </script>
+</body>
+</html>
