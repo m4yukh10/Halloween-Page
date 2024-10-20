@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster', cursive; 
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+  }
+  
+  .header {
+    background-color: #ff751a; 
+    padding: 20px;
+    border-bottom: 4px solid black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+  }
+  
+  h1 {
+    font-size: 4rem; 
+    margin: 0;
+  }
+  
+  p {
+    font-size: 1.5rem; 
+    margin: 10px 0;
+  }
+  
+  .pumpkin-section {
+    margin-top: 30px; 
+  }
+  
+  .pumpkin {
+    width: 200px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+    border-radius: 10%; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .pumpkin:hover {
+    transform: scale(1.1);
+  }
+  
+  .spooky-text {
+    font-size: 1.8rem; 
+    margin-top: 20px;
+    animation: flicker 1.5s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+  }
+  
+  footer {
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #ff751a; 
+    padding: 10px;
+    text-align: center; 
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); 
+  }
+  
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; } 
+  }
+  
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem; 
+    }
+  
+    p {
+      font-size: 1.2rem; 
+    }
+  
+    .pumpkin {
+      width: 150px;
+    }
+  
+    .spooky-text {
+      font-size: 1.5rem; 
+    }
+  }
+  
